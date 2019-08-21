@@ -37,7 +37,7 @@ async def on_message(message):
             await channel.send(role, role.color)
 
         
-
+#hello james
 
 client.run(secret) 
 
