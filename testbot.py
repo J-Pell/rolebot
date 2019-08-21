@@ -1,3 +1,4 @@
+from SecretKey import *
 import discord
 from discord.utils import get
 
@@ -38,7 +39,7 @@ async def on_message(message):
         
 
 
-client.run('NTk2MjIyODM1NDUwNzA3OTc4.XTaldQ.2wCOJyY8wlzGlgp1MZACn_ggQVw') 
+client.run(secret) 
 
 
 
