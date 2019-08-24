@@ -5,8 +5,11 @@ from discord.utils import get
 import discord.utils
 
 
-
+#initialize the discord client
 client = discord.Client()
+
+#set the context for the bot prefix
+bot = commands.Bot(command_prefix='$')
 
 
 
@@ -40,14 +43,13 @@ async def on_message(message):
             channel = client.get_channel(channelID)
             await channel.send(role, role.color)
 
-
 # arg1 is role name and arg2 is role color
 # user types $CreateRole to trigger
 # user needs to add "" around any role that is more than 1 word
 # need manage roles premission -- just give admin
 
 
-@client.command(pass_context = True)
+@bot.command(pass_context = True)
 async def CreateRole(ctx,arg1):
     RoleName = arg1
     #RoleColor = arg2
